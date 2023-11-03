@@ -10,6 +10,7 @@
         <label form>Nombre de Usuario</label>
         <input type="text" name="Nombre">
         <br>
+        <br>
         <label form>Contraseña</label>
         <input type="text" name="Contraseña">
         <br>
