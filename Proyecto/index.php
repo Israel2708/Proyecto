@@ -36,7 +36,9 @@
             echo "<th>Descripcion</td>"; 
             echo "<th>Stock</td>"; 
             echo "<th>Imagen</td>";
-            echo "<th>Precio</td>";  
+            echo "<th>Precio</td>";
+            echo "<th>Borrar</td>";
+            echo "<th>Actualizar</td>";  
         echo "</tr>";
 
             while($row = $result->fetch_assoc()) {
