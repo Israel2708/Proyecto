@@ -29,7 +29,7 @@
         $result = $conn->query($sql);
 
         // Repetimos por cada registro (linea por linea) encontrado en la BBDD
-        echo "<table border='1'>";
+        echo "<table>";
         echo "<tr>";
             echo "<th>ID</td>"; 
             echo "<th>Nombre</td>"; 
@@ -37,13 +37,10 @@
             echo "<th>Stock</td>"; 
             echo "<th>Imagen</td>";
             echo "<th>Precio</td>";
-            echo "<th>Borrar</td>";
-            echo "<th>Actualizar</td>";  
         echo "</tr>";
 
             while($row = $result->fetch_assoc()) {
                 // El nombre a buscar el $row coincide con el nombre de las columnas
-                if($row['estado'] ==1){
                     echo "<tr>";
                     echo "<td>".$row['ID']."</td>"; 
                     echo "<td>".$row['Nombre']."</td>"; 
@@ -51,10 +48,10 @@
                     echo "<td>".$row['Stock']."</td>"; 
                     //echo "<td>".$row['Imagen']."</td>";
                     echo "<td>".$row['Precio']."</td>"; 
-                    echo "<td><a href='borrar.php?idborrar=".$row['id']."'>Borrar</a></td>"; 
-                    echo "<td><a href='update.php?idmodificar=".$row['id']."'>Actualizar</a></td>"; 
+                    echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
+                    echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
                     echo "</tr>";
-                }
+                
             }
         echo "</table>";
     //Hemos terminado de mostrar todas las lineas y cierro la conexion

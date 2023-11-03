@@ -9,7 +9,7 @@
     $conn = new mysqli("localhost", "root", "", "proyectophp"); // (IP servidor BBDD, usuario, password, nombre base de datos)
 
     // Construir SQL con DELETE...
-    $sql = "delete from tareas where id=$idBorrar";
+    $sql = "delete from productos where id=$idBorrar";
 
     // ejecuto la consulta
     $conn->query($sql);
