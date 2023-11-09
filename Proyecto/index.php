@@ -40,6 +40,7 @@
             echo "<th>Stock</td>"; 
             echo "<th>Imagen</td>";
             echo "<th>Precio</td>";
+            echo "<th>Comprar</td>";
         echo "</tr>";
 
             while($row = $result->fetch_assoc()) {
@@ -51,6 +52,7 @@
                     echo "<td>".$row['Stock']."</td>"; 
                     //echo "<td>".$row['Imagen']."</td>";
                     echo "<td>".$row['Precio']."</td>"; 
+                    echo "<td><a href='añadircarrito.php?idañdir=".$row['ID']."'>Añadir</a></td>";
                     echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
                     echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
                     echo "</tr>";
