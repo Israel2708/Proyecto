@@ -10,8 +10,9 @@
       session_start();
       echo "<p><a href='index.php'>Volver al inicio</a></p>";
       /*Script del carrito*/
+
       //Vaciar el carrito
-      echo "<p><a href='vaciarcarrito.php'>Vaciar</a></p>"
+      echo "<p><a href='vaciarcarrito.php'>Vaciar</a></p>";
     ?>
 </body>
 </html>
