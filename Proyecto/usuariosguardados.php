@@ -18,7 +18,6 @@
     if(isset($_SESSION['usuariosguardados']));
     //Si ya existe el array de la contraseñas lo recupero para no sobreescribir
     if(isset($_SESSION['contraseñasguardadas']));
-
     //Guardamos el usuario y contraseña en la lista
     $usuariosguardados[] = $usuario;
     $contraseñasguardadas[] = $contraseña;
