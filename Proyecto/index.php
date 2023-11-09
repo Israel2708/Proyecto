@@ -50,7 +50,7 @@
                     echo "<td>".$row['Nombre']."</td>"; 
                     echo "<td>".$row['Descripcion']."</td>"; 
                     echo "<td>".$row['Stock']."</td>"; 
-                    //echo "<td>".$row['Imagen']."</td>";
+                    echo "<td>".$row['Imagen']."</td>";
                     echo "<td>".$row['Precio']."</td>"; 
                     echo "<td><a href='añadircarrito.php?idañdir=".$row['ID']."'>Añadir</a></td>";
                     echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
