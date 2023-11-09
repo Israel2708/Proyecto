@@ -27,7 +27,7 @@
          $sql = "select * from productos";
         // Ejecutamos y recogemos el resultado
         $result = $conn->query($sql);
-        //Introducimos lo de los usuarios 
+        //Introducimos el enlace para que los usuarios inicien sesion 
         echo "<p><a href='usuarios.php'>Inicio de Sesion</a></p>";
         // Repetimos por cada registro (linea por linea) encontrado en la BBDD
         echo "<table>";
