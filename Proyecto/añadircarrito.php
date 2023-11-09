@@ -8,10 +8,11 @@
 <body>
 <?php
     // Hago lo que sea para añadir en sesion
+    $ID=$_REQUEST["a href='añadircarrito.php?idañdir=.$row['ID']."];
     session_start();
-
     $_SESSION['msg'] = "Añadido al carrito";
-
+    //Declaramos el array
+    $idguardados = array();
     //Redirigo de vuelta a la pagina de productos
     Header("Location: index.php");
 ?>
