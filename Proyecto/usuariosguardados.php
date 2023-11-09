@@ -25,7 +25,7 @@
     $_SESSION['usuariosguardados']= $usuariosguardados;
     $_SESSION['contraseñasguardadas']= $contraseñasguardadas;
     //Regresamos a la pagina de inicio de sesion
-    header("Location: usuarios.php");
+    header("Location: index.php");
     ?>
 </body>
 </html>
