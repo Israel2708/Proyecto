@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de futbol</title>
-</head>
-<body>
-    <h1>Productos de futbol</h1>
-    <p>
+<?php
+// Creamos una conexion para la cabecera
+include('cabecera.php');
+?>
+    
         <?php
             session_start();
             //Compruebo si existe el mensaje (en la primera carga no va a existir)
@@ -16,14 +11,13 @@
                 unset($_SESSION['mensaje']); // Lo borro para que no siga apareciendo
             }
         ?>
-    </p>
+    
     <?php
     // Muestro el contenido de la BBDD
 
         // Crear una conexión
-        include('conexion.php');
-
-        // Construimos la consulta
+        include('conexion.php');        
+         // Construimos la consulta
          $sql = "select * from productos";
         // Ejecutamos y recogemos el resultado
         $result = $conn->query($sql);
@@ -52,7 +46,7 @@
                     echo "<td>".$row['Stock']."</td>"; 
                     echo "<td>".$row['Imagen']."</td>";
                     echo "<td>".$row['Precio']."</td>"; 
-                    echo "<td><a href='añadircarrito.php?idañdir=".$row['ID']."'>Añadir</a></td>";
+                    echo "<td><a href='carrito.php?idañadir=".$row['ID']."'>Añadir</a></td>";
                     echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
                     echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
                     echo "</tr>";
@@ -61,6 +55,10 @@
         echo "</table>";
     //Hemos terminado de mostrar todas las lineas y cierro la conexion
     $conn->close();
+    ?>
+    <?php
+    // Creamos una conexion para el pie de pagina
+    include('piepagina.php');
     ?>
 </body>
 </html>

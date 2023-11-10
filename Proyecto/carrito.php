@@ -1,18 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de la compra</title>
-</head>
-<body>
-    <?php 
-      session_start();
-      echo "<p><a href='index.php'>Volver al inicio</a></p>";
-      /*Script del carrito*/
-
-      //Vaciar el carrito
-      echo "<p><a href='vaciarcarrito.php'>Vaciar</a></p>";
+    <?php
+    // Creamos una conexion para la cabecera
+include('cabeceracarrito.php');
     ?>
-</body>
-</html>
+    <?php 
+      //Compruebo que me llegan los datos
+      if(isset($_REQUEST['idañadir'])){
+        $pedido = $_REQUEST['idañadir'];
+
+      session_start();
+
+      // Declaramos un nuevo array vacio
+       $pedidosLocal = array();
+
+      // Si ya existe el array con numero en sesion lo recupero
+      // para no sobreescribirlo
+      if(isset( $_SESSION['productospedidos'])){
+        $pedidosLocal = $_SESSION['productospedidos'];
+      }
+
+      // Añado el nuevo numero al final de la lista
+      $pedidosLocal[] = $pedido;
+
+      $_SESSION['productospedidos'] = $pedidoslocal;
+
+    
+    };
+    ?>
+    <?php
+    // Creamos una conexion para la cabecera
+include('piepagina.php');
+    ?>    
