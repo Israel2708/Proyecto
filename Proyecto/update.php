@@ -10,7 +10,7 @@
     include('conexion.php');
 
     // Construir SQL con DELETE...
-    $sql = "UPDATE id set Stock=2 where id=$idmodificar";
+    $sql = "UPDATE productos set Stock=12 where ID=$idmodificar";
 
     // ejecuto la consulta
     $conn->query($sql);

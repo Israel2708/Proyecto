@@ -46,9 +46,11 @@ include('cabecera.php');
                     echo "<td>".$row['Stock']."</td>"; 
                     echo "<td>".$row['Imagen']."</td>";
                     echo "<td>".$row['Precio']."</td>"; 
-                    echo "<td><a href='carrito.php?idañadir=".$row['ID']."'>Añadir</a></td>";
-                    echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
-                    echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
+                    echo "<td><a href='carrito.php?idañadir?=";
+                    echo $row['ID'];
+                    echo "'>Añadir</a></td>";
+                    //echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
+                    //echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
                     echo "</tr>";
                 
             }

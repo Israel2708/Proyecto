@@ -24,6 +24,7 @@
       $_SESSION['productospedidos'] = $pedidosLocal;
 
     };
+    var_dump($_REQUEST);
     ?>
     <?php
     // Creamos una conexion para la cabecera
