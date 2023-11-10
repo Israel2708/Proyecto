@@ -60,5 +60,3 @@ include('cabecera.php');
     // Creamos una conexion para el pie de pagina
     include('piepagina.php');
     ?>
-</body>
-</html>

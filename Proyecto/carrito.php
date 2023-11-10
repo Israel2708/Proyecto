@@ -28,5 +28,5 @@ include('cabeceracarrito.php');
     ?>
     <?php
     // Creamos una conexion para la cabecera
-include('piepagina.php');
+include('piepaginacarrito.php');
     ?>    

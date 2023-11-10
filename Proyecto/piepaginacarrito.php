@@ -6,4 +6,4 @@
     <title>Tienda de futbol</title>
 </head>
 <body>
-    <p>Carrito</p>
+    <p>Esperemos que lo que haya pedido satisfaga sus deseos futbolisticos</p>
