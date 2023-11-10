@@ -1,4 +1,4 @@
-<?php
+    <?php
     // Creamos una conexion para la cabecera
 include('cabeceracarrito.php');
     ?>
@@ -29,4 +29,4 @@ include('cabeceracarrito.php');
     <?php
     // Creamos una conexion para la cabecera
 include('piepagina.php');
-    ?>  
+    ?>    
