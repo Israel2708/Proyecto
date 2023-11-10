@@ -21,9 +21,8 @@ include('cabeceracarrito.php');
       // Añado el nuevo numero al final de la lista
       $pedidosLocal[] = $pedido;
 
-      $_SESSION['productospedidos'] = $pedidoslocal;
+      $_SESSION['productospedidos'] = $pedidosLocal;
 
-    
     };
     ?>
     <?php
