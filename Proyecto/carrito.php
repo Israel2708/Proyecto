@@ -40,6 +40,12 @@ foreach ($pedidosLocal as $posicion=>$valor) {
   $result = $conn->query($sql);
 
   //La muestro en una linea
+  echo "<table>";
+        echo "<tr>";
+            echo "<th>ID</td>"; 
+            echo "<th>Nombre</td>"; 
+            echo "<th>Precio</td>";
+            echo "</tr>";
   while($row = $result->fetch_assoc()) {
     echo "<table>";
     echo "<tr>";
