@@ -25,6 +25,8 @@
 
     };
     var_dump($_REQUEST);
+    //Volvemos a la tienda
+    echo "<p><a href='index.php'>Tienda</a></p>";
     ?>
     <?php
     // Creamos una conexion para la cabecera
