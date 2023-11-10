@@ -16,7 +16,7 @@
     //Si ya existe el array con el idguardadoslocal en sesion lo recupero
     //para no sobreescribirlo
     if (isset($_SESSION['idguardados'])) {
-        
+         
     }
     //Redirigo de vuelta a la pagina de productos
     Header("Location: index.php");
