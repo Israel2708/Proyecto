@@ -1,6 +1,6 @@
     <?php
     // Creamos una conexion para la cabecera
-include('cabeceracarrito.php');
+    include('cabeceracarrito.php');
     ?>
     <?php 
       //Compruebo que me llegan los datos
@@ -27,5 +27,5 @@ include('cabeceracarrito.php');
     ?>
     <?php
     // Creamos una conexion para la cabecera
-include('piepaginacarrito.php');
+    include('piepaginacarrito.php');
     ?>    
