@@ -7,7 +7,7 @@ foreach ($detalle_pedido as $_SESSION['productospedido']) {
 $sql= "select * from productos where id = idañadir";
 }
 //Recojo la informacion
-
+$result = $conn->query($sql);
 //La muestro en una linea
 echo;
 ?>
