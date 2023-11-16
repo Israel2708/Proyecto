@@ -17,10 +17,11 @@
       if(isset( $_SESSION['productospedidos'])){
         $pedidosLocal = $_SESSION['productospedidos'];
       }
-
+	// Verifica si el producto ya esta en la lista
+ if (!in_array($pedido,$pedidosLocal)){
       // Añado el nuevo numero al final de la lista
       $pedidosLocal[] = $pedido;
-
+}
       $_SESSION['productospedidos'] = $pedidosLocal;
 
     };
