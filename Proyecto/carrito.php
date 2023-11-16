@@ -47,9 +47,9 @@
             echo "</tr>";
       while($row = $result->fetch_assoc()) {
           echo "<tr>";
-            echo "<th>".$row['ID']."</th>";
-            echo "<th>".$row['Nombre']."</th>";
-            echo "<th>".$row['Precio']."</th>";
+            echo "<td>".$row['ID']."</td>";
+            echo "<td>".$row['Nombre']."</td>";
+            echo "<td>".$row['Precio']."</td>";
           echo "</tr>";
   
   }
