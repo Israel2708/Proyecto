@@ -13,5 +13,7 @@ $sql= "select * from productos where id = $valor";
 $result = $conn->query($sql);
 
 //La muestro en una linea
-while($row = $result->fetch_assoc()) {echo $row['ID']};
+while($row = $result->fetch_assoc()) {
+    echo $row['ID'];
+};
 ?>
