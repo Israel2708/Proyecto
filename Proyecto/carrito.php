@@ -27,7 +27,6 @@
     var_dump($pedidosLocal);
     //Volvemos a la tienda
     echo "<p><a href='index.php'>Tienda</a></p>";
-
     //Conexion
     include('conexion.php');  
     //Bucle de ese array
@@ -47,7 +46,6 @@
             echo "<th>Precio</td>";
             echo "</tr>";
       while($row = $result->fetch_assoc()) {
-      echo "<table>";
           echo "<tr>";
             echo "<th>".$row['ID']."</th>";
             echo "<th>".$row['Nombre']."</th>";
