@@ -53,11 +53,12 @@ foreach ($pedidosLocal as $posicion=>$valor) {
     echo "<th>".$row['Nombre']."</th>";
     echo "<th>".$row['Precio']."</th>";
     echo "</tr>";
-    echo "</table>";
+  
   }
 
 }
-
+// Cerramos la tabla
+echo "</table>";
 ?>
    <?php
     // Creamos una conexion para la cabecera
