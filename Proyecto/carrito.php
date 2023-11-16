@@ -1,4 +1,5 @@
 <?php
+
     // Creamos una conexion para la cabecera
     include('cabeceracarrito.php');
     ?>
@@ -23,6 +24,9 @@
       $pedidosLocal[] = $pedido;
 }
       $_SESSION['productospedidos'] = $pedidosLocal;
+      if (isset($_REQUEST['borrar_carrito'])) {
+        unset($_SESSION['productospedidos']);
+    }
 
     };
     var_dump($pedidosLocal);
@@ -56,10 +60,13 @@
   }
 
 }
+
     // Cerramos la tabla
         echo "</table>";
 ?>
    <?php
     // Creamos una conexion para la cabecera
+    echo "<p><a href='carrito.php?borrar_carrito='>Borrar Carrito</a></p>";
     include('piepaginacarrito.php');
+    
     ?>    
