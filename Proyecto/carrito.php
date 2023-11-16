@@ -1,72 +1,60 @@
 <?php
-
-    // Creamos una conexion para la cabecera
+    session_start();
     include('cabeceracarrito.php');
-    ?>
-    <?php 
-      //Iniciamos la sesion
-      session_start();
-      //Compruebo que me llegan los datos
-      if(isset($_REQUEST['idañadir'])){
+
+    // Acción: Agregar producto al carrito
+    if (isset($_REQUEST['idañadir'])) {
         $pedido = $_REQUEST['idañadir'];
 
-      // Declaramos un nuevo array vacio
-       $pedidosLocal = array();
+        $pedidosLocal = isset($_SESSION['productospedidos']) ? $_SESSION['productospedidos'] : array();
 
-      // Si ya existe el array con numero en sesion lo recupero
-      // para no sobreescribirlo
-      if(isset( $_SESSION['productospedidos'])){
-        $pedidosLocal = $_SESSION['productospedidos'];
-      }
-	// Verifica si el producto ya esta en la lista
- if (!in_array($pedido,$pedidosLocal)){
-      // Añado el nuevo numero al final de la lista
-      $pedidosLocal[] = $pedido;
-}
-      $_SESSION['productospedidos'] = $pedidosLocal;
-      if (isset($_REQUEST['borrar_carrito'])) {
+        // Verificar si el producto ya está en la lista
+        if (!in_array($pedido, $pedidosLocal)) {
+            // Añadir el nuevo número al final de la lista
+            $pedidosLocal[] = $pedido;
+        }
+
+        $_SESSION['productospedidos'] = $pedidosLocal;
+    }
+
+    // Acción: Borrar carrito completo
+    if (isset($_REQUEST['borrar_carrito'])) {
+        // Borrar todos los elementos del array
         unset($_SESSION['productospedidos']);
     }
 
-    };
     var_dump($pedidosLocal);
-    //Volvemos a la tienda
-    echo "<p><a href='index.php'>Tienda</a></p>";
-    //Conexion
-    include('conexion.php');  
-    //Bucle de ese array
-    foreach ($pedidosLocal as $posicion=>$valor) {
 
-    //Por cada ID contruyo un select where id=idproducto
-    $sql= "select * from productos where id = $valor";
+    include('conexion.php');
 
-    //Recojo la informacion
-    $result = $conn->query($sql);
+    foreach ($pedidosLocal as $valor) {
+        $sql = "SELECT * FROM productos WHERE id = $valor";
+        $result = $conn->query($sql);
 
-    //La muestro en una linea
-      echo "<table>";
-          echo "<tr>";
-            echo "<th>ID</td>"; 
-            echo "<th>Nombre</td>"; 
-            echo "<th>Precio</td>";
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>ID</th>";
+        echo "<th>Nombre</th>";
+        echo "<th>Precio</th>";
+        echo "</tr>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row['ID'] . "</td>";
+            echo "<td>" . $row['Nombre'] . "</td>";
+            echo "<td>" . $row['Precio'] . "</td>";
             echo "</tr>";
-      while($row = $result->fetch_assoc()) {
-          echo "<tr>";
-            echo "<td>".$row['ID']."</td>";
-            echo "<td>".$row['Nombre']."</td>";
-            echo "<td>".$row['Precio']."</td>";
-          echo "</tr>";
-  
-  }
+        }
 
-}
-
-    // Cerramos la tabla
         echo "</table>";
-?>
-   <?php
-    // Creamos una conexion para la cabecera
-    echo "<p><a href='carrito.php?borrar_carrito='>Borrar Carrito</a></p>";
+    }
+
+    $conn->close();
+
+    // Enlace para borrar el carrito
+    echo "<p><a href='carrito.php?borrar_carrito=1'>Borrar Carrito</a></p>";
+
+    echo "<p><a href='index.php'>Tienda</a></p>";
+
     include('piepaginacarrito.php');
-    
-    ?>    
+?>
