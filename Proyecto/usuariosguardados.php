@@ -7,8 +7,6 @@
 </head>
 <body>
     <?php 
-    var_dump($usuariosguardados);
-    var_dump($usuarios);
     //Creamos las variables para los usuarios y las contraseñas
     $usuario = $_REQUEST['Nombre'];
     $contraseña = $_REQUEST['Contraseña'];
