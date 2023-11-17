@@ -7,6 +7,8 @@
 </head>
 <body>
     <?php 
+    var_dump($usuariosguardados);
+    var_dump($usuarios);
     //Creamos las variables para los usuarios y las contraseñas
     $usuario = $_REQUEST['Nombre'];
     $contraseña = $_REQUEST['Contraseña'];
@@ -24,7 +26,8 @@
     $_SESSION['usuariosguardados']= $usuariosguardados;
     $_SESSION['contraseñasguardadas']= $contraseñasguardadas;
     //Regresamos a la pagina de inicio de sesion
-    header("Location: index.php");
+    header("Location: usuarios.php");
+    
     ?>
 </body>
 </html>
