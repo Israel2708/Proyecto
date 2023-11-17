@@ -12,16 +12,15 @@
     $contraseña = $_REQUEST['Contraseña'];
 
     // Conecto con la BBDD
- include('conexion.php');
+    include('conexion.php');
     // Construyo un select where usuario and passwod
-    $sql="SELECT * FROM usuarios WHERE nombre = "; 
+    //$sql="SELECT * FROM usuarios WHERE nombre = "; 
     // Si me devuelve una fila todo ok
 
     // Si son 0 filas error
 
     //Regresamos a la pagina de inicio de sesion
-    header("Location: usuarios.php");
-    
+    //header("Location: usuarios.php");
     ?>
 </body>
 </html>
