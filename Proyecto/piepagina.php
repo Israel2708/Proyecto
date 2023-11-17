@@ -6,4 +6,4 @@
     <title>Tienda de futbol</title>
 </head>
 <body>
-    <p>Esperemos que este todo a su gusto y disposicion</p>
+    <p>🥅Esperemos que este todo a su gusto y disposicion 🥅</p>

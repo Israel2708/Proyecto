@@ -28,7 +28,9 @@
 
     include('conexion.php');
 // Creamos la variable total 
-$total= 0;
+    $total= 0;
+   if (isset($pedidosLocal)) {
+    # code...
     foreach ($pedidosLocal as $valor) {
         $sql = "SELECT * FROM productos WHERE id = $valor";
         $result = $conn->query($sql);
@@ -51,10 +53,16 @@ $total= 0;
            }
 
         echo "</table>";
+        //Mostramos el precio total
+        echo "<p> El precio total del pedido es $total";
     }
-//Mostramos el precio total
-echo "<p> El precio total del pedido es $total";
+
     $conn->close();
+    
+   } else {
+        echo "No hay ningun pedido, esperamos que nos hagas un pedido 😊";
+   }
+    
 
     // Enlace para borrar el carrito
     echo "<p><a href='carrito.php?borrar_carrito=1'>Borrar Carrito</a></p>";
