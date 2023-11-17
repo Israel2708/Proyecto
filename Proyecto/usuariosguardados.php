@@ -7,20 +7,31 @@
 </head>
 <body>
     <?php 
-    //Creamos las variables para los usuarios y las contraseñas
-    $usuario = $_REQUEST['Nombre'];
-    $contraseña = $_REQUEST['Contraseña'];
 
-    // Conecto con la BBDD
-    include('conexion.php');
-    // Construyo un select where usuario and passwod
-    //$sql="SELECT * FROM usuarios WHERE nombre = "; 
-    // Si me devuelve una fila todo ok
+    if (isset($_REQUEST['Nombre']) && isset($_REQUEST['Contraseña'])){
+        //Creamos las variables para los usuarios y las contraseñas
+        $ID= $_REQUEST['ID'];
+        $usuario = $_REQUEST['Nombre'];
+        $contraseña = $_REQUEST['Contraseña'];
 
-    // Si son 0 filas error
+        // Conecto con la BBDD
+        include('conexion.php');
+        
+        //Construyo SQL 
+        $sql= "select * from usuarios where ID=>1";
 
-    //Regresamos a la pagina de inicio de sesion
-    //header("Location: usuarios.php");
+        // Compruebo si tiene mas de una linea
+        
+
+        //Regresamos a la pagina de inicio de sesion
+        header("Location: index.php");
+        //Sino existe regresamos a la pagina de inicio de sesion
+
+    }else{
+        header("Location:usuarios.php");
+    }
+
+
     ?>
 </body>
 </html>

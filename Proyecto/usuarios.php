@@ -9,6 +9,10 @@
 <body>
     <h1>Indentificate🆔</h1>
     <form action="usuariosguardados.php" method="get">
+        <label form>ID</label>
+        <input type="number" name="ID">
+        <br>
+        <br>
         <label form>Nombre de Usuario</label>
         <input type="text" name="Nombre">
         <br>
