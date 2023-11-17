@@ -38,6 +38,8 @@ include('cabecera.php');
         echo "<p><a href='usuarios.php'>Iniciar Sesion 📋</a></p>";
         //Introducimos el enlace para acceder al carrito de la compra
         echo "<p><a href='carrito.php'>Carrito🛒</a></p>";
+        //Introducimos el enlace para acceder a los pedidos
+        echo "<p><a href='pedidos.php'>Pedidos 📦</a></p>";
         // Repetimos por cada registro (linea por linea) encontrado en la BBDD
         echo "<table>";
         echo "<tr>";
