@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="CSS/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
     <title>Tienda de futbol</title>
 </head>
 <body>
@@ -34,7 +35,7 @@ include('cabecera.php');
         // Ejecutamos y recogemos el resultado
         $result = $conn->query($sql);
         //Introducimos el enlace para que los usuarios inicien sesion 
-        echo "<p><a href='usuarios.php'>Inicio de Sesion</a></p>";
+        echo "<p><a href='usuarios.php'>Iniciar Sesion</a></p>";
         //Introducimos el enlace para acceder al carrito de la compra
         echo "<p><a href='carrito.php'>Carrito</a></p>";
         // Repetimos por cada registro (linea por linea) encontrado en la BBDD
