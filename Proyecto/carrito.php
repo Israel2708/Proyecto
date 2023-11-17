@@ -30,7 +30,6 @@
 // Creamos la variable total 
     $total= 0;
    if (isset($pedidosLocal)) {
-    # code...
     foreach ($pedidosLocal as $valor) {
         $sql = "SELECT * FROM productos WHERE id = $valor";
         $result = $conn->query($sql);
