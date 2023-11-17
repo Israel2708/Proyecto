@@ -23,7 +23,7 @@
         unset($_SESSION['productospedidos']);
     }
 
-    var_dump($pedidosLocal);
+//    var_dump($pedidosLocal);
 
     include('conexion.php');
 
