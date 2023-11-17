@@ -36,6 +36,7 @@
         echo "<th>ID</th>";
         echo "<th>Nombre</th>";
         echo "<th>Precio</th>";
+        echo "<th>Total</th>";
         echo "</tr>";
 
         while ($row = $result->fetch_assoc()) {
@@ -43,6 +44,7 @@
             echo "<td>" . $row['ID'] . "</td>";
             echo "<td>" . $row['Nombre'] . "</td>";
             echo "<td>" . $row['Precio'] . "</td>";
+            //echo "<td>" /*Precio total*/"</td>";
             echo "</tr>";
         }
 
