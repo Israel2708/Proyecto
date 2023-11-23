@@ -53,9 +53,10 @@
 
         echo "</table>";
         //Mostramos el precio total
-        echo "<p> El precio total del pedido es $total";
+        
     }
-
+    //Mensaje del precio total
+    echo "<p> El precio total del pedido es $total";
     $conn->close();
     
    } else {
