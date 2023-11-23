@@ -14,10 +14,19 @@ a{
 th{
     color: red;
 }
+
 td{
     color: honeydew;
+}
+td,img {
+    width: 50px;
+    height: auto;
 }
 p{
     color: skyblue; 
 
+}
+img {
+    width: 10%;
+    height: 10px;
 }

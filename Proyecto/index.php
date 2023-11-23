@@ -52,12 +52,15 @@ include('cabecera.php');
 
             while($row = $result->fetch_assoc()) {
                 // El nombre a buscar el $row coincide con el nombre de las columnas
+                $ID = $row['ID'];
+                 $imagen = "productos/${ID}.jpg" ;
+
                     echo "<tr>";
                     echo "<td>".$row['ID']."</td>"; 
                     echo "<td>".$row['Nombre']."</td>"; 
                     echo "<td>".$row['Descripcion']."</td>"; 
                     echo "<td>".$row['Stock']."</td>"; 
-                    //echo "<td>".$row['Imagen']."</td>";
+             //       echo "<td><img src='".$imagen."' alt='Imagen de producto'></td>";
                     echo "<td>".$row['Precio']."</td>"; 
                     echo "<td><a href='carrito.php?idañadir=";
                     echo $row['ID'];
