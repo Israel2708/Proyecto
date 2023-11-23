@@ -23,6 +23,7 @@
         //Regresamos a la pagina de inicio de sesion
         header("Location: index.php");
         //Sino existe regresamos a la pagina de inicio de sesion
+        
         }    
           else 
         { 

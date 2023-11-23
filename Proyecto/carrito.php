@@ -52,13 +52,19 @@
            }
 
         echo "</table>";
-        //Mostramos el precio total
+    
         
     }
     //Mensaje del precio total
     echo "<p> El precio total del pedido es $total";
+    //Mensaje que aparece unicamente si hay pedido
+    echo "<p>¿Pedimos sus articulos?</p>";
+    echo "<form method='post' action='pedidos.php'>";
+    echo "<input type='hidden' name='total_pedido' value='$total'>";
+    echo "<button type='submit' name='realizar_pedido'>Realizar Pedido</button>";
+    echo "</form>";
+    include('piepaginacarrito.php');
     $conn->close();
-    
    } else {
         echo "No hay ningun pedido, esperamos que nos hagas un pedido 😊";
    }
@@ -69,5 +75,5 @@
 
     echo "<p><a href='index.php'>Tienda</a></p>";
 
-    include('piepaginacarrito.php');
+    
 ?>
