@@ -46,7 +46,7 @@ if (isset($_SESSION['Nombre'])) {
         echo "</table>";
 
         // Enlace o botón para dirigir a la página de añadir productos
-        echo "<p><a href='anadir.php'>Añadir Producto</a></p>";
+        echo "<p><a href='añadir.php'>Añadir Producto</a></p>";
         echo "<p><a href='index.php'>Vuelta a la tienda</a></p>";
         $conn->close();
     } else {

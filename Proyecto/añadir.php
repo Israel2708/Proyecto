@@ -10,7 +10,7 @@
     session_start(); // Iniciar la sesión al principio del archivo
 
     // Verificar si el usuario está autenticado como administrador
-    if (isset($_SESSION['super']) && $_SESSION['super'] == 'admin') {
+    if (isset($_SESSION['Nombre']) && $_SESSION['Nombre'] == 'admin') {
         // Incluir el archivo de conexión a la base de datos
         include('conexion.php');
 
