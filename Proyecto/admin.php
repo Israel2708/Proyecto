@@ -47,7 +47,7 @@ if (isset($_SESSION['Nombre'])) {
 
         // Enlace o botón para dirigir a la página de añadir productos
         echo "<p><a href='anadir.php'>Añadir Producto</a></p>";
-
+        echo "<p><a href='index.php'>Vuelta a la tienda</a></p>";
         $conn->close();
     } else {
         // Si el usuario no es administrador, puedes redirigirlo o mostrar un mensaje de error
