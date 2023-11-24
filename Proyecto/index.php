@@ -36,6 +36,7 @@ include('cabecera.php');
         $result = $conn->query($sql);
         //Introducimos el enlace para que los usuarios inicien sesion 
         echo "<p><a href='usuarios.php'>Iniciar Sesion 📋</a></p>";
+        echo "</br>";
         //Introducimos el enlace para acceder al carrito de la compra
         echo "<p><a href='carrito.php'>Carrito🛒</a></p>";
         // Repetimos por cada registro (linea por linea) encontrado en la BBDD
