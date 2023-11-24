@@ -7,10 +7,10 @@ include('cabeceraadmin.php');
 
 // Verificar si el usuario está autenticado
 if (isset($_SESSION['Nombre'])) {
-    $paco = $_SESSION['Nombre'];
+    $admin = $_SESSION['Nombre'];
 
     // Validar si el usuario es administrador
-    if ($paco == 'admin') {
+    if ($admin == 'admin') {
         // Incluir el archivo de conexión a la base de datos
         include('conexion.php');
 
@@ -27,7 +27,6 @@ if (isset($_SESSION['Nombre'])) {
         echo "<th>Stock</th>"; 
         echo "<th>Precio</th>";
         echo "<th>Borrar</th>";
-        echo "<th>Modificar</th>";
         echo "</tr>";
 
         while($row = $result->fetch_assoc()) {
