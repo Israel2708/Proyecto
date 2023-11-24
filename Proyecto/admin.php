@@ -41,7 +41,6 @@ if (isset($_SESSION['Nombre'])) {
             echo "<td>".$row['Stock']."</td>"; 
             echo "<td>".$row['Precio']."</td>"; 
             echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
-            echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
             echo "</tr>";
         }
 
