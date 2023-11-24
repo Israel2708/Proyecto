@@ -3,7 +3,7 @@
 session_start();
 
 // Incluir el archivo de cabecera
-include('cabecera.php');
+include('cabeceraadmin.php');
 
 // Verificar si el usuario está autenticado
 if (isset($_SESSION['Nombre'])) {
@@ -66,5 +66,5 @@ if (isset($_SESSION['Nombre'])) {
 }
 
 // Incluir el archivo del pie de página
-include('piepagina.php');
+include('piepaginaadministrador.php');
 ?>
