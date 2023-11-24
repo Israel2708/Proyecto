@@ -10,13 +10,13 @@
         $pedidosLocal = isset($_SESSION['productospedidos']) ? $_SESSION['productospedidos'] : array();
 
         // Verificar si el producto ya está en la lista
-        //if (!in_array($pedido, $pedidosLocal)) {
+        if (!in_array($pedido, $pedidosLocal)) {
             // Añadir el nuevo número al final de la lista
             $pedidosLocal[] = $pedido;
         }
 
         $_SESSION['productospedidos'] = $pedidosLocal;
-    //}
+    }
 
     // Acción: Borrar carrito completo
     if (isset($_REQUEST['borrar_carrito'])) {
