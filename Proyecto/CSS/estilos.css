@@ -9,7 +9,7 @@ h1{
 }
 
 a{
-    color: white;
+    color: rgb(116, 5, 5);
 }
 th{
     color: red;
@@ -18,9 +18,11 @@ th{
 td{
     color: honeydew;
 }
-td,img {
-    width: 50px;
-    height: auto;
+img{
+    width: 10%; /* Establece el ancho al 10% */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
 }
 p{
     color: skyblue; 

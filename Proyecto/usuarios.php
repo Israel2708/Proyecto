@@ -14,7 +14,7 @@
         <br>
         <br>
         <label form>Contraseña</label>
-        <input type="text" name="Contraseña">
+        <input type="text" name="Contraseña" required>
         <br>
         <br>
         <input type="submit">

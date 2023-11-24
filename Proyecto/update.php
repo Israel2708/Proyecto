@@ -1,25 +1,62 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Producto</title>
+</head>
+<body>
+    <?php 
+    session_start(); // Iniciar la sesión al principio del archivo
 
-    // Debería validad el ID que me envian
+    // Verificar si el usuario está autenticado como administrador
+    if (isset($_SESSION['super']) && $_SESSION['super'] == 'admin') {
+        // Incluir el archivo de conexión a la base de datos
+        include('conexion.php');
 
-    // Recojo el ID a borar
-    $idmodificar = $_REQUEST['idmodificar'];
+        // Verificar si se ha enviado el formulario de añadir
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Recoger los datos del formulario
+            $nombre = $_POST['nombre'];
+            $descripcion = $_POST['descripcion'];
+            $stock = $_POST['stock'];
+            $precio = $_POST['precio'];
 
-    // Conectarme a la BBDD
-    //$conn = new mysqli("localhost", "root", "", "examen2022"); // (IP servidor BBDD, usuario, password, nombre base de datos)
-    include('conexion.php');
+            // Insertar el nuevo producto en la base de datos
+            $sql = "INSERT INTO productos (Nombre, Descripcion, Stock, Precio) VALUES ('$nombre', '$descripcion', $stock, $precio)";
+            
+            if ($conn->query($sql) === TRUE) {
+                echo "Producto añadido correctamente.";
+            } else {
+                echo "Error al añadir el producto: " . $conn->error;
+            }
+        }
+        ?>
 
-    // Construir SQL con DELETE...
-    $sql = "UPDATE productos set Stock=12 where ID=$idmodificar";
+        <h2>Añadir Producto</h2>
+        <form action="" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required><br>
 
-    // ejecuto la consulta
-    $conn->query($sql);
+            <label for="descripcion">Descripción:</label>
+            <textarea name="descripcion" required></textarea><br>
 
-    // Cierro la conexión
-    $conn->close();
+            <label for="stock">Stock:</label>
+            <input type="number" name="stock" required><br>
 
-    // Una vez borrado redirigo a inicio
-    session_start();
-    $_SESSION['mensaje'] = 'Producto modificado';
-    header('Location: index.php');
-?>
+            <label for="precio">Precio:</label>
+            <input type="number" name="precio" required><br>
+
+            <input type="submit" value="Añadir Producto">
+        </form>
+
+        <?php
+        // Cerrar la conexión a la base de datos
+        $conn->close();
+    } else {
+        // Si el usuario no es administrador, mostrar un mensaje de error
+        echo "Acceso no autorizado. Por favor, inicia sesión como administrador.";
+    }
+    ?>
+</body>
+</html>

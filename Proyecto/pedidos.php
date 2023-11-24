@@ -13,8 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['realizar_pedido'])) {
     // Muestra un mensaje de confirmación al usuario
     echo "<h2>¡Pedido realizado con éxito!</h2>";
     echo "<p>Detalles del pedido:</p>";
-    echo "<p>Total del pedido: $total_pedido</p>";
-    echo "<p> Su pedido le llegara en $dias dias";
+    $fecha=date("Y-m-d H:i:s");
+    echo "<p>Total del pedido: $total_pedido </p>";
+    echo "<p> Su pedido le llegara en $dias dias 😀";
+    echo "<p> Su pedido se ha realizado el $fecha";
     // Puedes mostrar más detalles del pedido según tus necesidades
     // ...
 

@@ -45,7 +45,7 @@ include('cabecera.php');
             echo "<th>Nombre</td>"; 
             echo "<th>Descripcion</td>"; 
             echo "<th>Stock</td>"; 
-            //echo "<th>Imagen</td>";
+            echo "<th>Imagen</td>";
             echo "<th>Precio</td>";
             echo "<th>Comprar</td>";
         echo "</tr>";
@@ -54,19 +54,18 @@ include('cabecera.php');
                 // El nombre a buscar el $row coincide con el nombre de las columnas
                 $ID = $row['ID'];
                  $imagen = "productos/${ID}.jpg" ;
-
                     echo "<tr>";
                     echo "<td>".$row['ID']."</td>"; 
                     echo "<td>".$row['Nombre']."</td>"; 
                     echo "<td>".$row['Descripcion']."</td>"; 
                     echo "<td>".$row['Stock']."</td>"; 
-             //       echo "<td><img src='".$imagen."' alt='Imagen de producto'></td>";
+                  echo "<td><img src='".$imagen."' alt='Imagen de producto'></td>";
                     echo "<td>".$row['Precio']."</td>"; 
                     echo "<td><a href='carrito.php?idañadir=";
                     echo $row['ID'];
                     echo "'>Añadir</a></td>";
-                    //echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
-                    //echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
+                  //echo "<td><a href='borrar.php?idborrar=".$row['ID']."'>Borrar</a></td>"; 
+                  //echo "<td><a href='update.php?idmodificar=".$row['ID']."'>Actualizar</a></td>"; 
                     echo "</tr>";
                 
             }
