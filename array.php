@@ -48,6 +48,7 @@ do {
 } while ($i <= 10);
 echo "<br>";
 echo "<br>";
+//Condicional
 $numero = 2;
 switch ($numero) {
     case 1:
@@ -184,4 +185,20 @@ echo "<br>";
 echo "<br>";
 //Comprobacion de variables
 var_dump (isset($prue));
+//Condicionales elseif else if
+echo "<br>";
+echo "<br>";
+$condicion=2;
+if ($condicion<=1){
+    echo "la condicion es menor";
+}
+else if ($condicion==2) {
+    echo "La condicion es correcta";
+}
+else {
+    echo "La condicion es mayor";
+}
+echo "<br>";
+echo "<br>";
+//Condicional
 ?>
