@@ -23,7 +23,8 @@
             $precio = $_POST['precio'];
 
             // Insertar el nuevo producto en la base de datos
-            $sql = "INSERT INTO productos (Nombre, Descripcion, Stock, Precio) VALUES ('$nombre', '$descripcion', $stock, $precio)";
+            $sql = "INSERT INTO productos (Nombre, Descripcion, Stock, Precio) VALUES 
+            ('$nombre', '$descripcion', $stock, $precio)";
             
             if ($conn->query($sql) === TRUE) {
                 echo "Producto añadido correctamente.";
