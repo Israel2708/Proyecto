@@ -200,5 +200,14 @@ else {
 }
 echo "<br>";
 echo "<br>";
-//Condicional
+//Filtros
+echo "<br>";
+
+$filtro=123;
+if (filter_var($filtro, FILTER_VALIDATE_INT))  {
+    echo "La variable $filtro  es un numero";
+}
+else {
+    echo "La variable . $filtro . no es un numero";
+}
 ?>
