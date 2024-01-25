@@ -25,9 +25,9 @@ function showAlbum(evt){
   console.log(evt.target.id);
 
   // Construir una URL con el ID del Album
-    // Ejemplo: https://jsonplaceholder.typicode.com/albums/1/photos
+  // Ejemplo: https://jsonplaceholder.typicode.com/albums/1/photos
 
   // Hacer una llamada a la API para que me de ese album
 
-  // Recorrer el JSON y mostrar el album en la seccino correspondiente.
+  // Recorrer el JSON y mostrar el album en la seccion correspondiente.
 }
