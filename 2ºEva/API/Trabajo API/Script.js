@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Obtiene referencias a elementos HTML por sus IDs
     const form = document.getElementById('trumpQuoteForm');  // Formulario
-    const quoteArea = document.getElementById('quoteArea');  // Área para mostrar la cita
-    const searchKeywordInput = document.getElementById('searchKeyword');  // Entrada de palabra clave
-    const changeBackgroundButton = document.getElementById('changeBackgroundButton');  // Botón de cambio de fondo
+    const quoteArea = document.getElementById('cita');  // Área para mostrar la cita
+    const searchKeywordInput = document.getElementById('Palabra Clave');  // Entrada de palabra clave
+    const changeBackgroundButton = document.getElementById('CambiarFondo');  // Botón de cambio de fondo
 
     // Agrega un evento de escucha para el envío del formulario
     form.addEventListener('submit', function(event) {
