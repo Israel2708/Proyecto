@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Bienvenido a la pagina web</h1>
+    <div class="container mt-5">
+        <h1>Proyecto Tronaldump API</h1>
+
+        <form id="trumpQuoteForm">
+            <input type="text" id="Palabra Clave" class="form-control" placeholder="Palabra clave">
+            <button type="submit" class="btn btn-primary mt-3">Buscar Citas de Trump</button>
+        </form>
+
+        <div id="cita" class="mt-4">
+            <!-- Aquí se mostrará la cita de Trump -->
+        </div>
+        <button id="CambiarFondo">Cambiar Fondo</button>
+    </div>
+   
+    <script src="script.js"></script>
 </body>
 </html>
